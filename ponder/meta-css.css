@@ -1,0 +1,17 @@
+Body {
+    background-color: #ddd;
+    font-size: 20px;
+}
+
+#content {
+    max-width: 900px;
+    margin: 0 auto;
+    border: 40px solid darkgrey;
+    padding: 50px;
+}
+p{
+    color: #035f9c;
+    font-size: 1.3em;
+    
+}
+
