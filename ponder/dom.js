@@ -22,23 +22,23 @@ let para = document.querySelector('p');
 para.style.fontSize = '2em';
 
 para.classList.add('background');
-image.setAttribute('src', 'images/New_logo.png');
+//image.setAttribute('src', 'images/New_logo.png');
 
 const dropdown = document.querySelector("#webdevlist")
 
 const html = document.querySelector('#html');
 const css = document.querySelector('#css');
-const jss = document.querySelector('#jss');
+const js = document.querySelector('#js');
 
 //let dropdown = document.getElementById('webdevlist');
 dropdown.addEventListener('change', function(){
     // headertwo.style.color = "purple";
-    html.syle.color = "purple";
-    css.syle.color = "purple";
-    jss.syle.color = "purple";
+    html.style.color = "purple";
+    css.style.color = "purple";
+    js.style.color = "purple";
     let codeValue = dropdown.value;
     console.log(codeValue);
-    document.getElementsById(codeValue).style.color = 'red';
+    document.getElementById(codeValue).style.color = 'red';
 });
       
 
