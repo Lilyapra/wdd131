@@ -26,7 +26,11 @@ section {
 nav a {
     padding: 20px;
     color: black;
-    display: none;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    border-top: 1px solid grey;
+
 }
 nav a:hover {
     text-decoration: none;
@@ -42,7 +46,22 @@ nav a:hover {
     height: 4px;
     background-color: black;
     margin: 5px 0;
+    transition: .4s;
 }
+
+.hide{
+    display:none;
+}
+.change .bar1{
+    transform: translate(0, 9px) rotate(-45deg);
+}
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  transform: translate(0, -9px) rotate(45deg);
+}
+     
+
 footer {
     text-align: center;
 }
@@ -61,12 +80,19 @@ footer {
     }
     nav a {
         display: inline; 
+        border: none;
     }
     nav {
-        text-align: right;
+         display: flex;
+         justify-content: space-around;
+    }
+    .hide{
+        display:block;
+
     }
 }
-          
+      
+
 @media (min-width: 1024px) {
   main {
     grid-template-columns: repeat(3, 1fr);
