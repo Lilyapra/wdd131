@@ -30,7 +30,6 @@ function handleResize() {
 }
 
 function toggleMenu() {
-  // If the size class is less than 700px, hide the menu
   console.log(`toggle, inner width: ${window.innerWidth}`);
   if (window.innerWidth < 700) {
     document.getElementById("menu").classList.toggle("hide");
@@ -39,12 +38,21 @@ function toggleMenu() {
 
 function openViewer(event) {
   const image = event.target;
-  document.getElementById("viewer-image").src = image.src;
-  document.getElementById("viewer").showModal();
+
+  // safety check (prevents clicking container accidentally)
+  if (image.tagName !== "IMG") return;
+
+  const modal = document.getElementById("viewer");
+  const viewerImg = document.getElementById("viewer-image");
+
+  viewerImg.src = image.src;
+  viewerImg.alt = image.alt;
+
+  modal.showModal();
 }
 
 function closeViewer() {
-  document.getElementById("viewer").close();
-}
+   document.getElementById("viewer").close();
+ }
 
-initialSetup();
+ initialSetup();
