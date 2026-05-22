@@ -57,13 +57,27 @@ function articleTemplate(article) {
       </div>`;
 }
 
+// function renderArticles() {
+//   const articlesContainer = document.getElementById('book-posts');
+//   articles.forEach(article => {
+//     const articleElement = document.createElement('article');
+//     articleElement.innerHTML = articleTemplate(article);
+//     articlesContainer.appendChild(articleElement);
+//   });
+// }
+
+//renderArticles();
+
 function renderArticles() {
   const articlesContainer = document.getElementById('book-posts');
-  articles.forEach(article => {
-    const articleElement = document.createElement('article');
-    articleElement.innerHTML = articleTemplate(article);
-    articlesContainer.appendChild(articleElement);
-  });
+
+  
+  const article = articles[0];
+
+  const articleElement = document.createElement('article');
+  articleElement.innerHTML = articleTemplate(article);
+
+  articlesContainer.appendChild(articleElement);
 }
 
 renderArticles();
