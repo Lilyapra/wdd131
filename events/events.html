@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Ticket</title>
+  <link rel="icon" href="faviconn.ico">
+  <link rel="stylesheet" href="events.css" />
+  <script src="events.js" defer></script>
+
+</head>
+<body>
+
+  <div class="wrap">
+    <div class="card">
+      <h2>Event Ticket</h2>
+
+      <div class="row">
+        <div class="field">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" />
+        </div>
+        <div class="field">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" />
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="type">Type</label>
+          <select id="type">
+            <option value="">Choose one</option>
+            <option value="student">Student</option>
+            <option value="guest">Guest</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="edate">Event Date</label>
+          <input type="date" id="edate" />
+        </div>
+      </div>
+
+      <!-- Hidden field revealed on type selection -->
+      <div id="extra-field">
+        <label id="extra-label" for="extra-input">—</label>
+        <input type="text" id="extra-input" placeholder="" />
+      </div>
+
+      <button class="btn" onclick="submitForm()">Create Ticket</button>
+
+      <!-- Errors appear here after submit -->
+      <div id="errors"></div>
+    </div>
+
+    <!-- Ticket shown on success -->
+    <div id="ticket-out">
+      <div class="ticket">
+        <p class="ticket-heading">Ticket Created</p>
+        <p id="t-name"></p>
+        <p id="t-type"></p>
+        <p id="t-date"></p>
+      </div>
+    </div>
+
+  </div>
+
+
+</body>
+</html>

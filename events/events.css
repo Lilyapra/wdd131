@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #a8c1d6;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 1rem;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 540px;
+}
+
+/* ── Form card ── */
+.card {
+  background: #ffffff;
+  border: 1px solid #aac8e8;
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.card h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a3f6f;
+  margin-bottom: 1.5rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 1rem;
+}
+
+.field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a3f6f;
+}
+
+.field input,
+.field select {
+  height: 38px;
+  padding: 0 10px;
+  border: 1px solid #aac8e8;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #111827;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* .field input.err,
+.field select.err {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+} */
+
+/* ── Hidden extra field ── */
+#extra-field {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 1rem;
+}
+
+#extra-field.show {
+  display: flex;
+}
+
+#extra-field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a3f6f;
+}
+
+#extra-field input {
+  height: 38px;
+  padding: 0 10px;
+  border: 1px solid #aac8e8;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #111827;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+#extra-field input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+
+/* ── Submit button ── */
+.btn {
+  width: 100%;
+  height: 42px;
+  background: #7185af;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s;
+  margin-top: 0.25rem;
+}
+
+.btn:hover { background: #1d4ed8; }
+.btn:active { opacity: 0.9; }
+
+/* ── Errors ── */
+#errors { margin-top: 1.25rem; }
+
+
+
+.err-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+/* ── Ticket output ── */
+#ticket-out {
+  display: none;
+  margin-top: 1.5rem;
+}
+
+#ticket-out.show {
+  display: block;
+}
+
+.ticket {
+  background: #ffffff;
+  border: 1px solid #aac8e8;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.ticket-heading {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.75rem;
+}
+
+.ticket p {
+  font-size: 14px;
+  color: #111827;
+  line-height: 1.8;
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .row { grid-template-columns: 1fr; }
+}
