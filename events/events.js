@@ -84,7 +84,7 @@ function submitForm() {
       errors.push('Student I# is required.');
       extraInput.classList.add('err');
     } else if (!/^\d{9}$/.test(extra)) {
-      errors.push('Student I# must be exactly 9 digits (numbers only).');
+      errors.push('Student I# must be exactly 9 digits.');
       extraInput.classList.add('err');
     }
   }
