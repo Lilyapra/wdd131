@@ -37,6 +37,13 @@ main,
   padding: 1rem 1.25rem;
 }
 
+/* main now holds a list of recipe cards stacked with spacing between them */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
 /* ---------- Header: logo + title (flexbox) ---------- */
 .site-header {
   display: flex;
@@ -119,6 +126,12 @@ main,
   padding: 1rem;
 }
 
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
 .tag {
   align-self: flex-start;
   background-color: #f1f1f1;
@@ -150,6 +163,13 @@ main,
 /* Hide the long description on small / mobile screens */
 .recipe-description {
   display: none;
+}
+
+/* "No results" message shown when a search has no matches */
+.no-results {
+  text-align: center;
+  color: #666;
+  padding: 2rem 1rem;
 }
 
 /* ---------- Footer (flexbox) ---------- */
