@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8" />
+		<title>Site Plan</title>
+		<link type="text/css" rel="stylesheet" href="site-plan.css" />
+	</head>
+
+	<body>
+		<header>
+			<h1>Flash Cards</h1>
+			<h2>Lily Apraku</h2>
+			<h2>WDD 131</h2>
+			<!-- In the header above, add the name or your site, your name and class number. For example if you are in section 3 you would put WDD 131.03 -->
+		</header>
+		<main>
+			
+			<hr />
+			<h2>Overview</h2>
+			<h3>Purpose</h3>
+			<p>This web application helps users learn and self-test on ten essential cybersecurity terms through interactive flashcards and a quiz. The purpose is to make studying cybersecurity vocabulary quick, engaging, and repeatable.</p>
+			<!-- change this -->
+
+			<h3>Audience</h3>
+			<p>The intended audience is students, IT beginners, or anyone preparing for a security certification or class who wants a fast, no-frills way to review key terms and check their understanding.</p>
+			<!-- change this -->
+
+			<h3>Dynamic elements</h3>
+			<p>JavaScript will drive the core interactivity. An array of objects will store each term with its definition (e.g. {term: "Phishing", definition: "The act of attempting to acquire sensitive information by disguising as a trustworthy entity in an electronic communication"}). On the flashcard page, JavaScript will randomly select or cycle through cards, and a click/tap event will flip the card between the term and its definition using a CSS class toggle. On the quiz page, JavaScript will generate multiple-choice questions dynamically from the same data array, shuffle answer order, track the user's score in a variable, and display real-time feedback (correct/incorrect) after each answer using DOM manipulation. A final results message will display the score out of 10 once the quiz is complete, and localStorage may be used to save the user's best score between visits.</p>
+			<!-- change this -->
+
+			<hr />
+			<h2>Branding</h2>
+			<h3>Website Logo</h3>
+			<!-- Replace this with some sort of logo for your site.  A logo can be as simple as the name of your site in a nice font :) -->
+			<img src="#" alt="Logo image" />
+			<hr />
+			<h2>Style Guide</h2>
+
+			<h3>Color Palette</h3>
+			<!--  The colors you choose for a website are one of the most important decisions you will make. Follow the instructions on the activity in iLearn then return and replace the color codes below with the hex color codes (the 6 digit numbers that show at the bottom of each color) for the colors you have chosen below.  You should have at least 2 colors but do not have to fill in all 4 if you do not need them.  -->
+
+			<!-- Copy and paste the URL to your finished palette below Make sure to paste it into both spots -->
+			Palette URL:
+			<a
+				href="https://coolors.co/ada8b6-ffeedb-4c3b4d-a53860-61c9a8"
+				target="_blank"
+				>https://coolors.co/ada8b6-ffeedb-4c3b4d-a53860-61c9a8</a
+			>
+
+			<table class="colors">
+				<tbody>
+					<tr>
+						<th>Primary</th>
+						<th>Secondary</th>
+						<th>Accent 1</th>
+						<th>Accent 2</th>
+					</tr>
+					<!-- Replace the numbers in the boxes below with your hex color codes. Then switch to the site-plan.css file and change your colors there as well. -->
+					<tr>
+						<td class="primary">[#FFEEDB]</td>
+						<td class="secondary">[#4C3B4D]</td>
+						<td class="accent1">[#A53860]</td>
+						<td class="accent2">[#61C9A8]</td>
+					</tr>
+				</tbody>
+			</table>
+
+			
+
+			<h3>Pseudocode for your project</h3>
+
+			<p>
+				DEFINE array of 10 term objects: { term, definition }
+
+--- FLASHCARDS PAGE ---
+SET currentIndex = 0
+DISPLAY term at currentIndex
+
+ON click "Flip" button:
+    TOGGLE display between term and definition
+
+ON click "Next" button:
+    INCREMENT currentIndex (loop back to 0 if at end)
+    RESET card to show term (not definition)
+    DISPLAY new term
+
+ON click "Previous" button:
+    DECREMENT currentIndex (loop to last if at 0)
+    DISPLAY term
+
+--- QUIZ PAGE ---
+SET score = 0
+SET questionIndex = 0
+SHUFFLE array of terms
+
+FUNCTION loadQuestion(questionIndex):
+    GET term object at questionIndex
+    DISPLAY definition as the question
+    GENERATE 4 answer choices (1 correct term + 3 random distractors)
+    SHUFFLE choices
+    DISPLAY choices as clickable buttons
+
+ON click an answer choice:
+    IF choice == correct term:
+        score = score + 1
+        SHOW "Correct!" feedback
+    ELSE:
+        SHOW "Incorrect. The answer was ___" feedback
+    DISABLE further clicks on this question
+    SHOW "Next Question" button
+
+ON click "Next Question":
+    questionIndex = questionIndex + 1
+    IF questionIndex 10:
+        loadQuestion(questionIndex)
+    ELSE:
+        DISPLAY final score (score / 10)
+        IF score > storedBestScore in localStorage:
+            UPDATE localStorage bestScore
+        DISPLAY "New personal best!" if applicable
+			</p>
+
+			<h3>Wireframes</h3>
+			<p>
+				Create wireframes for your project page(s). One for each page and list them
+				here. 
+			</p>
+			<p>Page 1: Flashcards</p>
+                   <img src="images/flashcards.png" alt="Wireframe of flashcard page with term, flip button, and navigation">
+
+            <p>Page 2: Quiz</p>
+                     <img src="images/quize.png" alt="Wireframe of quiz page with question, four answer choices, and score">
+
+			<h3>Landing page</h3>
+			<p>
+				home page will have 2 buttons, one for the flashcards and one for the quiz. The user will click on either button to go to the respective page.
+			</p>
+			<img src="#" alt="home page wireframe" />
+
+			<h3>[Page 2 if needed]</h3>
+			<p>
+				[Any additional details about page 2 that the wireframe does not make
+				clear]
+			</p>
+			<img src="#" alt="page 2 wireframe" />
+		</main>
+	</body>
+</html>
