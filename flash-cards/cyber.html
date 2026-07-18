@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberTerms | Flashcards</title>
+  <meta name="description" content="Flip through ten must-know cybersecurity terms and test yourself with a quick quiz.">
+  <link rel="stylesheet" href="cyber.css">
+  <script src="cyber.js" defer></script>
+    <link rel="icon" href="images/favicon.ico">
+
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="logo">
+      CyberTerms
+    </div>
+    <nav>
+      <a href="cyber.html" aria-current="page">Flashcards</a>
+      <a href="cyber-page2.html">Quiz</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Flashcards</h1>
+    <p class="subtitle">Tap a card to flip it, then move to the next term.</p>
+
+    <div class="card-scene">
+      <div class="card" id="card" tabindex="0" role="button" aria-label="Flip card">
+        <div class="card-face card-front">
+          <p class="label" id="cardFront"></p>
+        </div>
+        <div class="card-face card-back">
+          <p class="label" id="cardBack"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-controls">
+      <button id="prevBtn">Previous</button>
+      <button id="flipBtn" class="primary">Flip</button>
+      <button id="nextBtn">Next</button>
+    </div>
+
+    <div class="progress" id="progress"></div>
+  </main>
+
+</body>
+</html>
